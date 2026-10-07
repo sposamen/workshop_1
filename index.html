@@ -3,15 +3,24 @@
 <script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library@1.0.1/build/nn.min.js"></script>
 
 <script>
+  //this is the function that lets me make emojis
+  function emoji () {
+    let x = nn.random(nn.width)
+    let y = nn.random(nn.height)
 
-nn.create('hi')
-  .content('🙀')
-  .addTo('main')
-  .position(200,100)
-  .scale(10)
+    nn.create('h1')
+      .content('🙀')
+      .addTo('main')
+      .position(x, y)
+    
+  }
+  if (onmousedown) {
+    nn.times(100, emoji)
+    .addTo('main')
+    
+    
+  } 
   
+  nn.times(100,emoji)
   
-
-
 </script>
-
